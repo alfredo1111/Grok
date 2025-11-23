@@ -1,1 +1,96 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Demo (POC Only)</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .box {
+    background: #1e293b;
+    padding: 30px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #334155;
+    color: white;
+    outline: none;
+  }
+
+  input:focus {
+    background: #475569;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #2563eb;
+  }
+
+  .output {
+    margin-top: 15px;
+    font-size: 14px;
+    background: rgba(255,255,255,0.08);
+    padding: 10px;
+    border-radius: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Demo Login (POC)</h2>
+
+  <input type="text" id="user" placeholder="Enter username">
+  <input type="password" id="pass" placeholder="Enter password">
+
+  <button onclick="demo()">Submit (Demo Only)</button>
+
+  <div id="out" class="output" style="display:none;"></div>
+</div>
+
+<script>
+function demo() {
+  let u = document.getElementById("user").value;
+  let p = document.getElementById("pass").value;
+
+  // POC — Safe: does NOT send data anywhere
+  document.getElementById("out").style.display = "block";
+  document.getElementById("out").innerText =
+    "POC Only — No data sent\nUsername: " + u + "\nPassword: " + p;
+}
+</script>
+
+</body>
+</html>
